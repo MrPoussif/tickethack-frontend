@@ -1,5 +1,5 @@
 console.log("script chargé");
 
-function fetchData() {
+function recupeDeLaData() {
   fetch("deladata");
 }
