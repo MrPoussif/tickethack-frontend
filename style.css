@@ -1,0 +1,86 @@
+#body {
+  margin: 0;
+  padding: auto;
+}
+
+#container {
+  height: 100hv;
+  width: 100wv;
+  display: grid;
+  grid-template-columns: repeat(12, 1f);
+  grid-template-rows: repeat(12, 1f);
+}
+
+#header {
+  display: flex;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 13;
+  border: 1px solid blue;
+}
+
+#logo {
+  color: rgb(65, 198, 134);
+  font-family: Open sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+#cart {
+  width: 5vw;
+  padding: 5px;
+  border: 2px #ffffff solid;
+  border-radius: 10px;
+  color: black;
+  font-size: 16px;
+  font-family: Open sans-serif;
+  text-align: center;
+}
+
+#bookings {
+  width: 5vw;
+  padding: 5px;
+  border: 2px #ffffff solid;
+  border-radius: 10px;
+  color: black;
+  font-size: 16px;
+  font-family: Open sans-serif;
+  text-align: center;
+}
+
+#content {
+  grid-row-start: 2;
+  grid-row-end: 13;
+  grid-column-start: 1;
+  grid-column-end: 13;
+  border: 1px solid yellow;
+}
+
+#text {
+  font-family: Open sans-serif;
+  font-size: 55px;
+  color: pink;
+}
+
+#test {
+  display: flex;
+}
+
+#content-left {
+  grid-row-start: 3;
+  grid-row-end: 9;
+  grid-column-start: 2;
+  grid-column-end: 5;
+  background-color: #f1f5f9;
+  border: 1px solid green;
+}
+
+#content-right {
+  grid-row-start: 2;
+  grid-row-end: 12;
+  grid-column-start: 7;
+  grid-column-end: 11;
+  background-color: #f1f5f9;
+  border: 1px solid green;
+}
