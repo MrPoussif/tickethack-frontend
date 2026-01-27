@@ -1,103 +1,72 @@
-#body {
+body {
   margin: 0;
-  padding: auto;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
 }
 
 #container {
-  height: 100hv;
-  width: 100wv;
-  display: grid;
-  grid-template-columns: repeat(12, 1f);
-  grid-template-rows: repeat(12, 1f);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 #header {
   display: flex;
-  grid-row-start: 1;
-  grid-row-end: 2;
-  grid-column-start: 1;
-  grid-column-end: 13;
-  border: 1px solid blue;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: white;
 }
 
-#logo {
-  grid-row-start: 1;
-  grid-row-end: 2;
-  grid-column-start: 2;
-  grid-column-end: 4;
+.textlogo {
+  text-decoration: none;
   color: rgb(65, 198, 134);
-  font-family: Open sans-serif;
   font-size: 30px;
   font-weight: bold;
 }
 
-#cart {
-  grid-row-start: 1;
-  grid-row-end: 2;
-  grid-column-start: 8;
-  grid-column-end: 9;
-  width: 5vw;
-  padding: 5px;
+.carttext,
+.bookingstext {
+  text-decoration: none;
   color: black;
-  font-size: 16px;
-  font-family: Open sans-serif;
-  text-align: center;
-}
-
-#bookings {
-  grid-row-start: 1;
-  grid-row-end: 2;
-  grid-column-start: 10;
-  grid-column-end: 11;
-  width: 5vw;
-  padding: 5px;
-  color: black;
-  font-size: 16px;
-  font-family: Open sans-serif;
-  text-align: center;
+  margin-left: 20px;
 }
 
 #content {
-  grid-row-start: 2;
-  grid-row-end: 13;
-  grid-column-start: 1;
-  grid-column-end: 13;
+  flex: 1;
   background-image: url("images/background.jpg");
   background-position: center;
-  border: 1px solid blueviolet;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 40px;
 }
 
 #text {
-  grid-row-start: 3;
-  grid-row-end: 5;
-  grid-column-start: 1;
-  grid-column-end: 13;
-  font-family: Open sans-serif;
-  font-size: 30px;
   text-align: center;
   color: white;
+  margin-bottom: 40px;
 }
 
 #two-contents {
   display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
 }
 
 #content-left {
-  grid-row-start: 3;
-  grid-row-end: 9;
-  grid-column-start: 2;
-  grid-column-end: 5;
   background-color: #f1f5f9;
-  border-radius: 5px;
-  border: 1px solid white;
+  border-radius: 8px;
+  padding: 20px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 #content-right {
-  grid-row-start: 2;
-  grid-row-end: 12;
-  grid-column-start: 7;
-  grid-column-end: 11;
   background-color: #f1f5f9;
-  border-radius: 5px;
-  border: 1px solid white;
+  border-radius: 8px;
+  padding: 20px;
+  width: 420px;
 }
