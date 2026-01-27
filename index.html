@@ -41,22 +41,24 @@
           <button type="button" id="btn-search">Search</button>
         </div>
 
-        <div id="content-right">
-          <section id="searchtrip">
-            <div id="state-welcome">
-              <img class="logo-state-welcome" src="images/train.png" />
-              <p class="text_content_right">
-                It's time to book your future trip.
-              </p>
+        <div id="content-right" class="panel panel--results">
+          <section id="searchtrip" class="results">
+            <div id="state-welcome" class="state state--welcome">
+              <img class="state-illustration" src="images/train.png" alt="" />
+              <p class="state-text">It's time to book your future trip.</p>
             </div>
 
-            <div id="state-empty" hidden>
-              <img class="logo-state-empty" src="images/notfound.png" />
-              <p>No trip found.</p>
+            <div id="state-empty" class="state state--empty" hidden>
+              <img
+                class="state-illustration"
+                src="images/notfound.png"
+                alt=""
+              />
+              <p class="state-text">No trip found.</p>
             </div>
 
-            <div id="state-results" hidden>
-              <ul id="results-list"></ul>
+            <div id="state-results" class="state state--results" hidden>
+              <ul id="results-list" class="results-list"></ul>
             </div>
           </section>
         </div>
