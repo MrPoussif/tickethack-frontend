@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="style.css" />
     <title>Tickethack</title>
   </head>
+
   <body>
     <div id="container">
       <div id="header">
@@ -14,13 +15,16 @@
             <a href="index.html" class="textlogo">Tickethack</a>
           </h3>
         </div>
+
         <div id="cart">
           <a href="cart.html" class="carttext">Cart</a>
         </div>
+
         <div id="bookings">
           <a href="bookings.html" class="bookingstext">Bookings</a>
         </div>
       </div>
+
       <div id="content">
         <div id="text">
           <h2 class="first">Explore the world effortlessly by train!</h2>
@@ -29,15 +33,36 @@
             starts on Tickethack
           </h4>
         </div>
+
         <div id="content-left">
           <input id="departure" type="text" placeholder="Departure" />
           <input id="arrival" type="text" placeholder="Arrival" />
           <input type="date" id="date" />
           <button type="button" id="btn-search">Search</button>
         </div>
-        <div id="content-right">A compléter</div>
+
+        <div id="content-right">
+          <section id="searchtrip">
+            <div id="state-welcome">
+              <img class="logo-state-welcome" src="images/train.png" />
+              <p class="text_content_right">
+                It's time to book your future trip.
+              </p>
+            </div>
+
+            <div id="state-empty" hidden>
+              <img class="logo-state-empty" src="images/notfound.png" />
+              <p>No trip found.</p>
+            </div>
+
+            <div id="state-results" hidden>
+              <ul id="results-list"></ul>
+            </div>
+          </section>
+        </div>
       </div>
     </div>
+
     <script src="script.js"></script>
   </body>
 </html>
