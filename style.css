@@ -21,6 +21,10 @@
 }
 
 #logo {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 2;
+  grid-column-end: 4;
   color: rgb(65, 198, 134);
   font-family: Open sans-serif;
   font-size: 30px;
@@ -28,10 +32,12 @@
 }
 
 #cart {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 8;
+  grid-column-end: 9;
   width: 5vw;
   padding: 5px;
-  border: 2px #ffffff solid;
-  border-radius: 10px;
   color: black;
   font-size: 16px;
   font-family: Open sans-serif;
@@ -39,10 +45,12 @@
 }
 
 #bookings {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 10;
+  grid-column-end: 11;
   width: 5vw;
   padding: 5px;
-  border: 2px #ffffff solid;
-  border-radius: 10px;
   color: black;
   font-size: 16px;
   font-family: Open sans-serif;
@@ -50,21 +58,25 @@
 }
 
 #content {
+  display: flex;
   grid-row-start: 2;
   grid-row-end: 13;
   grid-column-start: 1;
   grid-column-end: 13;
-  border: 1px solid yellow;
+  background-image: url("images/background.jpg");
+  background-position: center;
+  border: 1px solid blueviolet;
 }
 
 #text {
+  grid-row-start: 3;
+  grid-row-end: 5;
+  grid-column-start: 1;
+  grid-column-end: 13;
   font-family: Open sans-serif;
-  font-size: 55px;
-  color: pink;
-}
-
-#test {
-  display: flex;
+  font-size: 30px;
+  text-align: center;
+  color: white;
 }
 
 #content-left {
@@ -73,7 +85,8 @@
   grid-column-start: 2;
   grid-column-end: 5;
   background-color: #f1f5f9;
-  border: 1px solid green;
+  border-radius: 5px;
+  border: 1px solid white;
 }
 
 #content-right {
@@ -82,5 +95,6 @@
   grid-column-start: 7;
   grid-column-end: 11;
   background-color: #f1f5f9;
-  border: 1px solid green;
+  border-radius: 5px;
+  border: 1px solid white;
 }
