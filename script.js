@@ -1,5 +1,7 @@
 console.log("script chargé");
 
-function fetchData() {
+function fetchTheData() {
   fetch("deladata");
 }
+
+function tatata() {}
