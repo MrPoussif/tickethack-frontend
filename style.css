@@ -25,8 +25,15 @@ body {
   font-weight: bold;
 }
 
-.carttext,
+.carttext {
+  padding-left: 1100px;
+  text-decoration: none;
+  color: black;
+  margin-left: 20px;
+}
+
 .bookingstext {
+  padding-left: 0px;
   text-decoration: none;
   color: black;
   margin-left: 20px;
@@ -69,4 +76,11 @@ body {
   border-radius: 8px;
   padding: 20px;
   width: 420px;
+}
+
+#btn-search {
+  padding: 5px;
+  background-color: rgb(65, 198, 134);
+  color: white;
+  border-radius: 5px;
 }
