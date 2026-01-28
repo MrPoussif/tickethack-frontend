@@ -72,43 +72,24 @@ function initSearchPage() {
   });
 }
 
-  function initBookButtons() {
-    document.querySelectorAll(".btn-book").forEach((btn) => {
-      btn.addEventListener("click", () => {
-        const tripId = btn.dataset.id;
+function initBookButtons() {
+  document.querySelectorAll(".btn-book").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const tripId = btn.dataset.id;
 
-        fetch("http://localhost:3000/index", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ tripId }),
+      fetch("http://localhost:3000/index", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ tripId }),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          if (!data.result) return console.error(data.error);
+          window.location.href = "cart.html";
         })
-          .then((res) => res.json())
-          .then((data) => {
-            if (!data.result) return console.error(data.error);
-            window.location.href = "cart.html";
-          })
-          .catch((err) => console.error("Erreur add cart", err));
-      });
+        .catch((err) => console.error("Erreur add cart", err));
     });
-  }
-}
-
-list = [
-  { departure: "Paris", arrival: "Marseille", price: "125€" },
-  { departure: "Paris", arrival: "Marseille", price: "98€" },
-  { departure: "Paris", arrival: "Marseille", price: "108€" },
-  { departure: "Paris", arrival: "Marseille", price: "57€" },
-  { departure: "Paris", arrival: "Marseille", price: "37€" },
-];
-
-function totalPrice(tripList) {
-  // ! Prends un tableau d'objets en entrée
-  total = 0;
-  for (let trip of tripList) {
-    console.log("price", trip.price);
-    total += parseInt(trip.price);
-  }
-  return total;
+  });
 }
 
 /* =========================
@@ -137,10 +118,12 @@ function loadCart() {
 
       const container = document.querySelector("#trips-container");
       const totalElements = document.querySelector("#total");
+      const totalPrice = calculPrice(data.trips);
 
       if (data.trips.length === 0) {
         container.innerHTML = `<p class="trip-text">Your cart is empty.</p>`;
-        totalElements.textContent = "Total : 0 €";
+        totalElements.textContent = `Total : 0€`;
+
         return;
       }
 
@@ -166,7 +149,7 @@ function loadCart() {
       // Exemple attendu:
       // const total = computeTotal(data.trips);
       // totalElements.textContent = `Total : ${total} €`;
-      totalElements.textContent = "Total :"; // placeholder (ou "Total : ...")
+      totalElements.textContent = `Total : ${totalPrice} €`; // placeholder (ou "Total : ...")
       // ==============================================
 
       document.querySelectorAll(".btn-delete").forEach((btn) => {
@@ -184,4 +167,14 @@ function loadCart() {
       });
     })
     .catch((err) => console.error("Erreur chargement cart", err));
+}
+
+function calculPrice(tripList) {
+  // ! Prends un tableau d'objets en entrée
+  total = 0;
+  for (let trip of tripList) {
+    console.log("price", trip.price);
+    total += parseInt(trip.price);
+  }
+  return total;
 }
