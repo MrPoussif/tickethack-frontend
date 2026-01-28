@@ -37,11 +37,11 @@ document.querySelector("#btn-search").addEventListener("click", () => {
                   ${trip.departure} &gt; ${trip.arrival}
                 </div>
 
-                <div class="departure-time">
+                <div class="departure-time trip-text">
                   ${new Date(trip.date).toLocaleTimeString("fr-FR", { hour: "2-digit", minute: "2-digit" })}
                 </div>
 
-                <div class="price">
+                <div class="price trip-text">
                   ${trip.price} €
                 </div>
 
