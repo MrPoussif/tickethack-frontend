@@ -176,7 +176,8 @@ h2 {
 .trip {
   background-color: rgb(241, 236, 229);
   border-radius: 5px;
-  height: 50px;
+  width: 90%;
+  height: 150px;
   margin-bottom: 30px;
   display: flex;
   justify-content: space-around;
@@ -184,6 +185,14 @@ h2 {
   font-size: small;
 }
 .btn-delete {
+  background-color: rgb(65, 198, 134);
+  color: white;
+  border-radius: 3px;
+  height: 30px;
+  width: 30px;
+  border: none;
+}
+.btn-book {
   background-color: rgb(65, 198, 134);
   color: white;
   border-radius: 3px;
