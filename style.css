@@ -5,14 +5,16 @@ body {
   background-color: rgb(236, 243, 244);
   height: 100vh;
   width: 100vw;
+  font-size: large;
 }
 
 #header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 40px;
+  padding: 10px 40px;
   background-color: white;
+  font-size: larger;
 }
 
 .textlogo {
@@ -74,11 +76,6 @@ h2 {
 #content-left {
   justify-content: space-between;
   margin-right: 80px;
-  gap: 15px;
-}
-#content-right {
-  justify-content: center;
-  text-align: center;
 }
 
 #departure-arrival {
@@ -87,11 +84,12 @@ h2 {
 }
 .traject {
   width: 95%;
-  height: 40%;
+  height: 40px;
   background-color: rgb(234, 233, 233);
   border-radius: 5px;
   border-style: none;
   padding-left: 10px;
+  font-size: large;
 }
 #date {
   margin-top: 50px;
@@ -100,6 +98,21 @@ h2 {
   border-top: 1px solid gray;
   width: 95%;
   margin-left: 6px;
+}
+#btn-search {
+  padding: 8px;
+  width: 95%;
+  height: 40px;
+  background-color: rgb(65, 198, 134);
+  color: white;
+  border-radius: 5px;
+  border: none;
+  font-size: large;
+  margin-top: 20px;
+}
+#content-right {
+  justify-content: center;
+  text-align: center;
 }
 #state-welcome {
   width: 100%;
@@ -116,19 +129,9 @@ h2 {
 #state-text {
   margin: 50px 0;
 }
-#btn-search {
-  padding: 8px;
-  margin-top: 150px;
-  width: 95%;
-  height: 35%;
-  background-color: rgb(65, 198, 134);
-  color: white;
-  border-radius: 5px;
-  border: none;
-}
 
 /********* CART.HTML ********/
-#content-cart {
+/* #content-cart {
   display: flex;
   align-items: center;
   height: 85vh;
@@ -190,9 +193,9 @@ h2 {
   height: 30px;
   width: 30px;
   border: none;
-}
+} */
 /********* BOOKING.HTML ********/
-#content-bookings {
+/* #content-bookings {
   display: flex;
   height: 85vh;
 }
@@ -208,4 +211,4 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
+} */
