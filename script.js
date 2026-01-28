@@ -1,19 +1,16 @@
 console.log("script chargé");
 // bouton search
 document.querySelector("#btn-search").addEventListener("click", () => {
-  const departure = document.querySelector("#departure").value;
-  const arrival = document.querySelector("#arrival").value;
+  const departure = document.querySelector("#departure").value.trim();
+  const arrival = document.querySelector("#arrival").value.trim();
   const date = document.querySelector("#date").value;
-
-  // garde-fou simple
-  if (!departure || !arrival || !date) return;
 
   // construction de l’URL avec query params
   const params = new URLSearchParams({ departure, arrival, date });
   const url = `http://localhost:3000/index?${params.toString()}`;
 
   fetch(url)
-    .then((res) => res.json())
+    .then((response) => response.json())
     .then((data) => {
       const contentRight = document.querySelector("#content-right");
 
