@@ -6,10 +6,11 @@ document.querySelector("#btn-search").addEventListener("click", () => {
   const date = document.querySelector("#date").value;
 
   // construction de l’URL avec query params
-  const params = new URLSearchParams({ departure, arrival, date });
-  const url = `http://localhost:3000/index?${params.toString()}`;
-
-  fetch(url)
+  fetch("http://localhost:3000/index/search", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ departure, arrival, date }),
+  })
     .then((response) => response.json())
     .then((data) => {
       const contentRight = document.querySelector("#content-right");
@@ -40,10 +41,7 @@ document.querySelector("#btn-search").addEventListener("click", () => {
           </div>
 
           <div class="departure-time">
-            ${new Date(trip.date).toLocaleTimeString([], {
-              hour: "2-digit",
-              minute: "2-digit",
-            })}
+
           </div>
 
           <div class="price">

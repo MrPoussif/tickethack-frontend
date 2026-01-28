@@ -67,8 +67,6 @@ h2 {
   align-items: center;
   border-radius: 8px;
   padding: 20px;
-  overflow-y: auto;
-  overflow-x: hidden;
 }
 
 #content-left {
@@ -79,6 +77,8 @@ h2 {
 #content-right {
   justify-content: center;
   text-align: center;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 #departure-arrival {
