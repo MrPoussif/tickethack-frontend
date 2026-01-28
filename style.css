@@ -48,9 +48,11 @@ body {
   text-align: center;
   color: white;
   margin-bottom: 40px;
-  margin-top: -20px;
+  padding-top: 30px;
 }
-
+h2 {
+  margin: 0;
+}
 #two-contents {
   display: flex;
   justify-content: center;
@@ -65,6 +67,8 @@ body {
   align-items: center;
   border-radius: 8px;
   padding: 20px;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 #content-left {
