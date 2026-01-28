@@ -2,12 +2,13 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Open Sans", sans-serif;
-}
-
-#container {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  background-color: rgb(236, 243, 244);
+  height: 100vh;
+  width: 100vw;
+  background-image: url("images/background.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 #header {
@@ -24,28 +25,24 @@ body {
   font-size: 30px;
   font-weight: bold;
 }
-
+#menu {
+  display: flex;
+  justify-content: space-between;
+}
 .carttext {
-  padding-left: 1100px;
+  /* padding-left: 1100px; */
   text-decoration: none;
   color: black;
   margin-left: 20px;
 }
-
+#content {
+  margin-top: 50px;
+}
 .bookingstext {
   padding-left: 0px;
   text-decoration: none;
   color: black;
   margin-left: 20px;
-}
-
-#content {
-  flex: 1;
-  background-image: url("images/background.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  padding: 40px;
 }
 
 #text {
@@ -89,15 +86,20 @@ body {
   background-color: rgb(234, 233, 233);
   border-radius: 5px;
   border-style: none;
+  padding-left: 10px;
 }
-
+#line {
+  border-top: 1px solid gray;
+  width: 98%;
+  margin-left: 6px;
+}
 #arrival {
+  padding-left: 10px;
   width: 245px;
   height: 30px;
   background-color: rgb(234, 233, 233);
   border-radius: 5px;
   border-style: none;
-  border-top: solid;
 }
 
 #btn-search {
@@ -108,3 +110,70 @@ body {
   border-radius: 5px;
   border-color: white;
 }
+
+/********* CART.HTML ********/
+#content-cart {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+#box {
+  background-color: white;
+  width: 60vw;
+  margin: auto;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+#box-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* margin-bottom: 20px; */
+}
+#box-bottom {
+  background-color: rgb(4, 4, 50);
+  height: 50px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  color: white;
+}
+
+#btn-purchase {
+  background-color: rgb(65, 198, 134);
+  color: white;
+  border-radius: 3px;
+  height: 50%;
+  border: none;
+  padding: 0 15px;
+}
+#trips-container {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+.trip {
+  background-color: rgb(241, 236, 229);
+  border-radius: 5px;
+  height: 50px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: small;
+}
+#btn-delete {
+  background-color: rgb(65, 198, 134);
+  color: white;
+  border-radius: 3px;
+  height: 30px;
+  width: 30px;
+  border: none;
+}
+/********* BOOKING.HTML ********/
