@@ -8,79 +8,82 @@
   </head>
 
   <body>
-    <div id="container">
-      <div id="header">
-        <div id="logo">
-          <h3>
-            <a href="index.html" class="textlogo">Tickethack</a>
-          </h3>
-        </div>
-
+    <!-- <div id="container"> -->
+    <!-- HEADER -->
+    <div id="header">
+      <div id="logo">
+        <h3>
+          <a href="index.html" class="textlogo">Tickethack</a>
+        </h3>
+      </div>
+      <div id="menu">
         <div id="cart">
           <a href="cart.html" class="carttext">Cart</a>
         </div>
-
         <div id="bookings">
           <a href="bookings.html" class="bookingstext">Bookings</a>
         </div>
       </div>
+    </div>
+    <!-- HEADER FIN -->
 
-      <div id="content">
-        <div id="text">
-          <h2 class="first">Explore the world effortlessly by train!</h2>
-          <h4 class="second">
-            Compare, book and enjoy cheap prices for train tickets: your journey
-            starts on Tickethack
-          </h4>
+    <div id="content">
+      <div id="text">
+        <h2 class="first">Explore the world effortlessly by train!</h2>
+        <h4 class="second">
+          Compare, book and enjoy cheap prices for train tickets: your journey
+          starts on Tickethack
+        </h4>
+      </div>
+      <div id="two-contents">
+        <div id="content-left">
+          <div id="departureArrival">
+            <input
+              id="departure"
+              class="traject"
+              type="text"
+              placeholder="Departure"
+            />
+            <div id="line"></div>
+            <input
+              id="arrival"
+              class="traject"
+              type="text"
+              placeholder="Arrival"
+            />
+          </div>
+          <input type="date" id="date" />
+          <button type="button" id="btn-search" class="button">Search</button>
         </div>
-        <div id="two-contents">
-          <div id="content-left">
-            <div id="departureArrival">
-              <input
-                id="departure"
-                class="traject"
-                type="text"
-                placeholder="Departure"
+
+        <div id="content-right">
+          <section id="searchtrip">
+            <div id="state-welcome">
+              <img
+                class="state-welcome-illustration"
+                src="images/train.png"
+                alt=""
               />
-              <input
-                id="arrival"
-                class="traject"
-                type="text"
-                placeholder="Arrival"
-              />
+              <p class="state-text">It's time to book your future trip.</p>
             </div>
-            <input type="date" id="date" />
-            <button type="button" id="btn-search">Search</button>
-          </div>
 
-          <div id="content-right">
-            <section id="searchtrip">
-              <div id="state-welcome">
-                <img
-                  class="state-welcome-illustration"
-                  src="images/train.png"
-                  alt=""
-                />
-                <p class="state-text">It's time to book your future trip.</p>
-              </div>
+            <div id="state-empty" hidden>
+              <img
+                class="state-empty-illustration"
+                src="images/notfound.png"
+                alt=""
+              />
+              <p class="state-text">No trip found.</p>
+            </div>
 
-              <div id="state-empty" hidden>
-                <img
-                  class="state-empty-illustration"
-                  src="images/notfound.png"
-                  alt=""
-                />
-                <p class="state-text">No trip found.</p>
-              </div>
-
-              <div id="state-results" hidden>
-                <ul id="results-list"></ul>
-              </div>
-            </section>
-          </div>
+            <div id="state-results" hidden>
+              <ul id="results-list"></ul>
+            </div>
+          </section>
         </div>
       </div>
     </div>
+    <!-- </div> -->
 
     <script src="script.js"></script>
   </body>

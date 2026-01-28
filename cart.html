@@ -7,13 +7,15 @@
     <title>Tickethack</title>
   </head>
   <body>
-    <div id="container">
-      <div id="header">
-        <div id="logo">
-          <h3>
-            <a href="index.html" class="textlogo">Tickethack</a>
-          </h3>
-        </div>
+    <!-- <div id="container"> -->
+    <!-- HEADER -->
+    <div id="header">
+      <div id="logo">
+        <h3>
+          <a href="index.html" class="textlogo">Tickethack</a>
+        </h3>
+      </div>
+      <div id="menu">
         <div id="cart">
           <a href="cart.html" class="carttext">Cart</a>
         </div>
@@ -21,15 +23,30 @@
           <a href="bookings.html" class="bookingstext">Bookings</a>
         </div>
       </div>
-      <div id="content-cart">
-        <div id="">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
-          mollitia blanditiis maxime possimus nobis excepturi necessitatibus
-          fugiat esse quis consequuntur qui accusantium, enim reprehenderit
-          dolor sapiente dolorum laudantium praesentium iusto.
+    </div>
+    <!-- HEADER FIN -->
+    <div id="content-cart">
+      <div id="box">
+        <div id="box-top">
+          <h3>My cart</h3>
+          <div id="trips-container">
+            <div class="trip">
+              <div id="trip-text">Exemple > Exemple</div>
+              <div id="departure-time">Time</div>
+              <div id="price">130 €</div>
+              <button type="button" id="btn-delete" class="button">X</button>
+            </div>
+          </div>
+        </div>
+        <div id="box-bottom">
+          <p id="total">Total :</p>
+          <button type="button" id="btn-purchase" class="button">
+            Purchase
+          </button>
         </div>
       </div>
     </div>
+    <!-- </div> -->
     <script src="script.js"></script>
   </body>
 </html>
