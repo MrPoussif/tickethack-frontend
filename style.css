@@ -131,7 +131,7 @@ h2 {
 #content-cart {
   display: flex;
   align-items: center;
-  height: 100vh;
+  height: 85vh;
 }
 #box {
   background-color: white;
@@ -192,3 +192,20 @@ h2 {
   border: none;
 }
 /********* BOOKING.HTML ********/
+#content-bookings {
+  display: flex;
+  height: 85vh;
+}
+#enjoy {
+  color: rgb(65, 198, 134);
+  font-size: larger;
+}
+#line-black {
+  border-top: 2px solid rgb(55, 54, 54);
+  width: 20%;
+}
+#block-text-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
