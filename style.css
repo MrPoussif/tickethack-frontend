@@ -183,7 +183,7 @@ h2 {
   align-items: center;
   font-size: small;
 }
-#btn-delete {
+.btn-delete {
   background-color: rgb(65, 198, 134);
   color: white;
   border-radius: 3px;
