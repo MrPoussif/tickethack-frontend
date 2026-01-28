@@ -8,7 +8,6 @@
   </head>
 
   <body>
-    <!-- <div id="container"> -->
     <!-- HEADER -->
     <div id="header">
       <div id="logo">
@@ -26,8 +25,7 @@
       </div>
     </div>
     <!-- HEADER FIN -->
-
-    <div id="content">
+    <div id="container">
       <div id="text">
         <h2 class="first">Explore the world effortlessly by train!</h2>
         <h4 class="second">
@@ -36,15 +34,15 @@
         </h4>
       </div>
       <div id="two-contents">
-        <div id="content-left">
-          <div id="departureArrival">
+        <div id="content-left" class="content-box">
+          <div id="departure-arrival">
             <input
               id="departure"
               class="traject"
               type="text"
               placeholder="Departure"
             />
-            <div id="line"></div>
+            <div id="line-left"></div>
             <input
               id="arrival"
               class="traject"
@@ -52,19 +50,20 @@
               placeholder="Arrival"
             />
           </div>
-          <input type="date" id="date" />
+          <input type="date" id="date" class="traject" />
           <button type="button" id="btn-search" class="button">Search</button>
         </div>
 
-        <div id="content-right">
+        <div id="content-right" class="content-box">
           <section id="searchtrip">
             <div id="state-welcome">
               <img
-                class="state-welcome-illustration"
+                id="state-welcome-illustration"
                 src="images/train.png"
                 alt=""
               />
-              <p class="state-text">It's time to book your future trip.</p>
+              <div id="line-right"></div>
+              <p id="state-text">It's time to book your future trip.</p>
             </div>
 
             <div id="state-empty" hidden>
@@ -83,7 +82,6 @@
         </div>
       </div>
     </div>
-    <!-- </div> -->
 
     <script src="script.js"></script>
   </body>
