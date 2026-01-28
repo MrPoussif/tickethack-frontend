@@ -5,10 +5,6 @@ body {
   background-color: rgb(236, 243, 244);
   height: 100vh;
   width: 100vw;
-  background-image: url("images/background.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 #header {
@@ -30,85 +26,105 @@ body {
   justify-content: space-between;
 }
 .carttext {
-  /* padding-left: 1100px; */
   text-decoration: none;
   color: black;
   margin-left: 20px;
 }
-#content {
-  margin-top: 50px;
-}
+
 .bookingstext {
   padding-left: 0px;
   text-decoration: none;
   color: black;
   margin-left: 20px;
 }
-
+#container {
+  background-image: url("images/background.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+}
 #text {
   text-align: center;
   color: white;
   margin-bottom: 40px;
+  padding-top: 30px;
 }
-
+h2 {
+  margin: 0;
+}
 #two-contents {
   display: flex;
   justify-content: center;
   align-items: flex-start;
 }
-
-#content-left {
+.content-box {
+  width: 20vw;
+  height: 40vh;
   background-color: #f1f5f9;
-  border-radius: 8px;
-  padding: 20px;
-  margin-right: 40px;
-  width: 250px;
-  height: 300px;
   display: flex;
   flex-direction: column;
-  gap: 15px;
-}
-
-#content-right {
-  background-color: #f1f5f9;
+  align-items: center;
   border-radius: 8px;
   padding: 20px;
-  margin-left: 40px;
-  width: 250px;
-  height: 300px;
   overflow-y: auto;
   overflow-x: hidden;
 }
 
-#departure {
-  width: 245px;
-  height: 30px;
-  background-color: rgb(234, 233, 233);
-  border-radius: 5px;
-  border-style: none;
-  padding-left: 10px;
+#content-left {
+  justify-content: space-between;
+  margin-right: 80px;
+  gap: 15px;
 }
-#line {
-  border-top: 1px solid gray;
-  width: 98%;
-  margin-left: 6px;
-}
-#arrival {
-  padding-left: 10px;
-  width: 245px;
-  height: 30px;
-  background-color: rgb(234, 233, 233);
-  border-radius: 5px;
-  border-style: none;
+#content-right {
+  justify-content: center;
+  text-align: center;
 }
 
+#departure-arrival {
+  width: 100%;
+  height: 100%;
+}
+.traject {
+  width: 95%;
+  height: 40%;
+  background-color: rgb(234, 233, 233);
+  border-radius: 5px;
+  border-style: none;
+  padding-left: 10px;
+}
+#date {
+  margin-top: 50px;
+}
+#line-left {
+  border-top: 1px solid gray;
+  width: 95%;
+  margin-left: 6px;
+}
+#state-welcome {
+  width: 100%;
+}
+#line-right {
+  border-top: 3px solid rgb(65, 198, 134);
+  width: 100%;
+  margin-top: 50px;
+}
+#state-welcome-illustration {
+  width: 150px;
+  margin-top: 20px;
+}
+#state-text {
+  margin: 50px 0;
+}
 #btn-search {
   padding: 8px;
   margin-top: 150px;
+  width: 95%;
+  height: 35%;
   background-color: rgb(65, 198, 134);
   color: white;
   border-radius: 5px;
-  border-color: white;
+  border: none;
 }
 
 /********* CART.HTML ********/
@@ -131,7 +147,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* margin-bottom: 20px; */
 }
 #box-bottom {
   background-color: rgb(4, 4, 50);
