@@ -31,21 +31,31 @@ document.querySelector("#btn-search").addEventListener("click", () => {
 
       // affichage des résultats
       contentRight.innerHTML = `
-        <ul>
-          ${data.trips
-            .map(
-              (trip) => `
-                <li>
-                  <strong>${trip.departure}</strong>
-                  →
-                  <strong>${trip.arrival}</strong><br>
-                  ${new Date(trip.date).toLocaleDateString()}
-                </li>
-              `,
-            )
-            .join("")}
-        </ul>
-      `;
+  ${data.trips
+    .map(
+      (trip) => `
+        <div class="trip">
+          <div class="trip-text">
+            ${trip.departure} &gt; ${trip.arrival}
+          </div>
+
+          <div class="departure-time">
+            ${new Date(trip.date).toLocaleTimeString([], {
+              hour: "2-digit",
+              minute: "2-digit",
+            })}
+          </div>
+
+          <div class="price">
+            ${trip.price} €
+          </div>
+
+          <button type="button" class="btn-delete">X</button>
+        </div>
+      `,
+    )
+    .join("")}
+`;
     })
     .catch(() => {
       document.querySelector("#content-right").innerHTML =
