@@ -69,13 +69,18 @@ h2 {
   align-items: center;
   border-radius: 8px;
   padding: 20px;
-  overflow-y: auto;
-  overflow-x: hidden;
 }
 
 #content-left {
   justify-content: space-between;
   margin-right: 80px;
+  gap: 15px;
+}
+#content-right {
+  justify-content: center;
+  text-align: center;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 #departure-arrival {
