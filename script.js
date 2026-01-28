@@ -9,7 +9,7 @@ if (document.querySelector("#btn-purchase")) {
 }
 
 /* =========================
-   SEARCH PAGE
+   HOMEPAGE
 ========================= */
 function initSearchPage() {
   document.querySelector("#btn-search").addEventListener("click", () => {
@@ -102,11 +102,10 @@ function initCartPage() {
   if (btnPurchase) {
     btnPurchase.addEventListener("click", () => {
       fetch("http://localhost:3000/cart", { method: "POST" })
-        .then(async (res) => {
-          await res.text(); // ton back renvoie du texte
+        .then(() => {
           window.location.href = "bookings.html";
         })
-        .catch((err) => console.error("Erreur purchase", err));
+        .catch((err) => console.error("Error purchase", err));
     });
   }
 }
@@ -118,11 +117,11 @@ function loadCart() {
       if (!data.result) return console.error(data.error);
 
       const container = document.querySelector("#trips-container");
-      const totalEl = document.querySelector("#total");
+      const totalElements = document.querySelector("#total");
 
       if (data.trips.length === 0) {
         container.innerHTML = `<p class="trip-text">Your cart is empty.</p>`;
-        totalEl.textContent = "Total : 0 €";
+        totalElements.textContent = "Total : 0 €";
         return;
       }
 
@@ -138,23 +137,18 @@ function loadCart() {
                 })}
               </div>
               <div class="trip-text">${trip.price} €</div>
-              <button
-                type="button"
-                class="btn-delete button"
-                data-id="${trip._id}"
-              >
-                X
-              </button>
+              <button type="button" class="btn-delete button" data-id="${trip._id}">X</button>
             </div>
           `,
         )
         .join("");
 
-      const total = data.trips.reduce(
-        (sum, trip) => sum + Number(trip.price),
-        0,
-      );
-      totalEl.textContent = `Total : ${total} €`;
+      // ===== SLOT TOTAL =====
+      // Exemple attendu:
+      // const total = computeTotal(data.trips);
+      // totalElements.textContent = `Total : ${total} €`;
+      totalElements.textContent = "Total :"; // placeholder (ou "Total : ...")
+      // ==============================================
 
       document.querySelectorAll(".btn-delete").forEach((btn) => {
         btn.addEventListener("click", () => {
